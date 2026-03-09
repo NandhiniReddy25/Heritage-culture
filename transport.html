@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Transport Booking</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin: 40px;
+      background: #f5f5f5;
+    }
+    h2 {
+      color: #222;
+      margin-bottom: 20px;
+    }
+    .section {
+      margin: 30px 0;
+    }
+    .button-container {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+    a.button {
+      display: inline-block;
+      padding: 14px 24px;
+      font-size: 18px;
+      font-weight: bold;
+      color: #fff;
+      border-radius: 8px;
+      text-decoration: none;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+      transition: transform 0.2s, background 0.3s;
+    }
+    a.button:hover {
+      transform: scale(1.05);
+    }
+    .tsrtc { background: #2e7d32; }
+    .tsrtc:hover { background: #1b5e20; }
+    .abhibus { background: #ff6f00; }
+    .abhibus:hover { background: #e65100; }
+    .airways { background: #1976d2; }
+    .airways:hover { background: #0d47a1; }
+    .railways { background: #7b1fa2; }
+    .railways:hover { background: #4a148c; }
+  </style>
+</head>
+<body>
+
+  <h2>Transport Booking - All States </h2>
+
+  <!-- Busways -->
+  <div class="section">
+    <h3>🚌 Bus Booking</h3>
+    <div class="button-container">
+      <a href="https://www.abhibus.com/?msclkid=54e93bb83f0110e0cd65537c77d62cec&utm_source=bing&utm_medium=cpc&utm_campaign=Abhibus_Brand_ROI&utm_term=abhibus&utm_content=Brand" target="_blank" class="button abhibus">AbhiBus</a>
+    </div>
+  </div>
+
+  <!-- Airways -->
+  <div class="section">
+    <h3>✈ Air Booking</h3>
+    <div class="button-container">
+      <a href="https://www.makemytrip.com/flights/hyderabad-flight-tickets.html" target="_blank" class="button airways">Book Flights</a>
+    </div>
+  </div>
+
+  <!-- Railways -->
+  <div class="section">
+    <h3>🚆 Train Booking</h3>
+    <div class="button-container">
+      <a href="https://www.irctc.co.in" target="_blank" class="button railways">IRCTC Official</a>
+    </div>
+  </div>
+
+</body>
+</html>

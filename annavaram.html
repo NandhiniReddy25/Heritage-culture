@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Heritage · Culture · Tourism</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f9f9f9;
+    }
+
+    header {
+      background: #4b0082;
+      color: white;
+      text-align: center;
+      padding: 20px;
+    }
+
+    /* Temple Section */
+    .temple-section {
+      display: flex;
+      align-items: flex-start;
+      justify-content: center;
+      padding: 20px;
+      gap: 20px;
+    }
+
+    .temple-section img {
+      width: 600px;
+      height: auto;
+      border-radius: 8px;
+    }
+
+    .temple-info {
+      max-width: 600px;
+      background: #fff;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+
+    h2 {
+      margin-top: 0;
+      color: #222;
+    }
+
+    /* Booking Section */
+    .booking {
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+      padding: 20px;
+    }
+
+    .card {
+      background: #fff;
+      padding: 20px;
+      margin: 10px;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      width: 300px;
+    }
+
+    .card form {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .card label {
+      margin: 8px 0 4px;
+      font-weight: bold;
+    }
+
+    .card input {
+      padding: 8px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+
+    .card button {
+      margin-top: 12px;
+      padding: 10px;
+      background: #4b0082;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+
+    .card button:hover {
+      background: #360061;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .temple-section {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .temple-section img {
+        width: 100%;
+        max-width: 500px;
+      }
+
+      .temple-info {
+        max-width: 90%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Heritage · Culture · Tourism</h1>
+    <p>Explore India’s rich heritage, culture, and tourism</p>
+  </header>
+  <section class="temple-section">
+  
+    <img src="images/annavaram1.jpg" alt="Annavaram Temple">
+    <div class="temple-info">
+      <h2>annavaram Temple</h2>
+      <p>The hill-top shrine is on Ratnagiri Hill, overlooking the Pampa River and Bay of Bengal.
+        Legend says the deity Lord Satyanarayana (a form of Lord Vishnu) manifested here to bless devotees seeking prosperity and peace.
+        </p>
+        <p>The temple’s unique Trikoota architecture enshrines Satyanarayana Swamy, Ananta Lakshmi, and Lord Shiva in one complex.
+        Built in the early 20th century; the famous Satyanarayana Vratam originated here and is performed daily by thousands.
+
+        <p><b>Darshan Timings</b>
+        Morning: 4:00 AM – 1:00 PM
+        Evening: 4:00 PM – 9:00 PM
+        (Timings may extend during festivals like Dasara.)
+        </p>
+      <p><b>Best Time to Visit</b>
+        October – March for pleasant weather.
+        Major festivals: Karthika Masam, Vaikuntha Ekadasi, and Sankranti draw huge crowds.
+
+
+    </p>
+      
+    </div>
+  </section>
+
+  <!-- Booking Section -->
+  <section class="booking">
+    <!-- Hotel Booking -->
+    <div class="card">
+      <h2>Hotel Booking</h2>
+      <form>
+        <label>Name:</label>
+        <input type="text" required>
+        
+        <label>Check-in:</label>
+        <input type="date" required>
+        
+        <label>Check-out:</label>
+        <input type="date" required>
+        
+        <button type="submit">Book Hotel</button>
+      </form>
+    </div>
+
+    <!-- Transport Booking -->
+    <div class="card">
+      <h2>Transport Booking</h2>
+      <form>
+        <label>Name:</label>
+        <input type="text" required>
+        
+        <label>From:</label>
+        <input type="text" required>
+        
+        <label>To:</label>
+        <input type="text" required>
+        
+        <label>Date of Travel:</label>
+        <input type="date" required>
+        
+        <button type="submit">Book Transport</button>
+      </form>
+    </div>
+  </section>
+</body>
+</html>

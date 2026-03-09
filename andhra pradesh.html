@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Heritage, Culture, Tourism</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f0f2f5;
+      margin: 0;
+    }
+
+    .top-bar {
+      background-color: #6a00c6;
+      color: #fff;
+      padding: 20px 0;
+      text-align: center;
+    }
+
+    .top-bar h1 {
+      font-size: 2.5rem;
+      margin: 0 0 5px;
+      letter-spacing: 1px;
+    }
+
+    .top-bar p {
+      margin: 0;
+      font-size: 1rem;
+      opacity: 0.9;
+    }
+
+    .main-container {
+      max-width: 1200px;
+      margin: 40px auto;
+      padding: 20px;
+    }
+
+    .header-buttons {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+
+    .button-card {
+      background-color: #fff;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      padding: 20px 50px;
+      font-size: 1.2rem;
+      font-weight: bold;
+      color: #555;
+      text-align: center;
+      max-width: 300px;
+      cursor: pointer;
+      transition: transform 0.2s, box-shadow 0.2s;
+      text-decoration: none;
+    }
+
+    .button-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+    }
+
+    .section-heading {
+      text-align: center;
+      font-size: 1.8rem;
+      color: #333;
+      margin: 40px 0 20px;
+    }
+
+    /* ✅ Fixed: Added food-gallery class for proper alignment */
+    .food-gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      justify-items: center;
+    }
+
+    .food-item {
+      background-color: #fff;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      padding: 15px;
+      text-align: center;
+      transition: transform 0.2s, box-shadow 0.2s;
+      width: 100%;
+      max-width: 250px;
+    }
+
+    .food-item:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+    }
+
+    .food-item img {
+      width: 100%;
+      height: 180px;
+      border-radius: 8px;
+      object-fit: cover;
+      margin-bottom: 10px;
+    }
+
+    .food-item h3 {
+      margin: 0;
+      font-size: 1.1rem;
+      color: #333;
+    }
+  </style>
+</head>
+<body>
+  <div class="top-bar">
+    <h1>Heritage • Culture • Tourism</h1>
+    <p>Explore India's rich heritage, culture, and tourism</p>
+  </div>
+  <h1 style="text-align: center;">Andhra Pradesh</h1>
+  <div class="main-container">
+    <div class="header-buttons">
+      <a href="andhra temples.html" class="button-card">Famous Temples</a>
+      <a href="andhra tourist places.html" class="button-card">Tourist Places</a>
+      <a href="hotels.html" class="button-card">Hotel Booking</a>
+      <a href="transport.html" class="button-card">Transport Facilities</a>
+    </div>
+
+    <main>
+      <section id="famous-food">
+        <h2 class="section-heading">Famous Food</h2>
+        <div class="food-gallery">
+          <div class="food-item">
+            <img src="images/madatha kaja.jpg" alt="Madatha Kaja">
+            <h3>Madatha Kaja</h3>
+          </div>
+          <div class="food-item">
+            <img src="images/gongura.jpg" alt="Gongura Pachadi">
+            <h3>Gongura Pachadi</h3>
+          </div>
+          <div class="food-item">
+            <img src="images/pesarattu.jpg" alt="Pesarattu">
+            <h3>Pesarattu</h3>
+          </div>
+          <div class="food-item">
+            <img src="images/bobbatlu.jpg" alt="Bobbatlu">
+            <h3>Bobbatlu</h3>
+          </div>
+          <div class="food-item">
+            <img src="images/royyala-iguru.jpg" alt="Royyala Iguru">
+            <h3>Royyala Iguru</h3>
+          </div>
+          <div class="food-item">
+            <img src="images/putharekulu.jpg" alt="Putharekulu">
+            <h3>Putharekulu</h3>
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
+</body>
+</html>

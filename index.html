@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Heritage Culture and Tourism</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-image: url('images/background.png');
+      background-position: center;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      background-size: cover;
+      color: white;
+      text-align: center;
+    }
+
+    .overlay {
+      background: rgba(0, 0, 0, 0.5);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+    }
+
+    h1 {
+      font-size: 3.5rem;
+      font-family: "Georgia", serif;
+      color: gold;
+      text-shadow: 2px 2px 8px black;
+      margin-bottom: 10px;
+    }
+
+    .caption {
+      font-size: 1.5rem;
+      font-style: italic;
+      color: #ffebcd;
+      margin-bottom: 30px;
+    }
+
+    .form-box {
+      background: rgba(255, 255, 255, 0.15);
+      padding: 30px;
+      border-radius: 15px;
+      box-shadow: 0 0 20px rgba(255,255,255,0.7);
+      width: 350px;
+    }
+
+    .tab-buttons {
+      display: flex;
+      justify-content: space-around;
+      margin-bottom: 20px;
+    }
+
+    .tab-buttons button {
+      flex: 1;
+      padding: 10px;
+      margin: 0 5px;
+      border: none;
+      border-radius: 10px;
+      background: #333;
+      color: white;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .tab-buttons button.active {
+      background: linear-gradient(45deg, #ff8c00, #ff0080);
+    }
+
+    .form-content {
+      display: none;
+    }
+
+    .form-content.active {
+      display: block;
+    }
+
+    input {
+      width: 90%;
+      padding: 12px;
+      margin: 10px 0;
+      border: none;
+      border-radius: 10px;
+      font-size: 1rem;
+    }
+
+    .form-content button {
+      padding: 12px 25px;
+      border: none;
+      border-radius: 10px;
+      background: linear-gradient(45deg, #ff8c00, #ff0080);
+      color: white;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .form-content button:hover {
+      transform: scale(1.1);
+    }
+  </style>
+</head>
+<body>
+  <div class="overlay">
+    <h1>Heritage Culture and Tourism</h1>
+    <p class="caption">"Discover the beauty, traditions, and festivals of India – all in one place"</p>
+
+    <div class="form-box">
+      <!-- Tab Buttons -->
+      <div class="tab-buttons">
+        <button id="loginTab" class="active" onclick="showForm('login')">Login</button>
+        <button id="signupTab" onclick="showForm('signup')">Sign Up</button>
+      </div>
+
+      <!-- Login Form -->
+      <div id="loginForm" class="form-content active">
+        <input type="text" id="loginUsername" placeholder="Username"><br>
+        <input type="password" id="loginPassword" placeholder="Password"><br>
+        <button onclick="loginUser()">Login</button>
+      </div>
+
+      <!-- Signup Form -->
+      <div id="signupForm" class="form-content">
+        <input type="text" id="signupName" placeholder="Full Name"><br>
+        <input type="email" id="signupEmail" placeholder="Email"><br>
+        <input type="text" id="signupUsername" placeholder="Username"><br>
+        <input type="password" id="signupPassword" placeholder="Password"><br>
+        <button onclick="signupUser()">Sign Up</button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // Switch between Login and Signup
+    function showForm(type) {
+      document.getElementById("loginForm").classList.remove("active");
+      document.getElementById("signupForm").classList.remove("active");
+      document.getElementById("loginTab").classList.remove("active");
+      document.getElementById("signupTab").classList.remove("active");
+
+      if (type === 'login') {
+        document.getElementById("loginForm").classList.add("active");
+        document.getElementById("loginTab").classList.add("active");
+      } else {
+        document.getElementById("signupForm").classList.add("active");
+        document.getElementById("signupTab").classList.add("active");
+      }
+    }
+
+    // Sign Up Function
+    function signupUser() {
+      let name = document.getElementById("signupName").value;
+      let email = document.getElementById("signupEmail").value;
+      let username = document.getElementById("signupUsername").value;
+      let password = document.getElementById("signupPassword").value;
+
+      if (!name || !email || !username || !password) {
+        alert("Please fill all fields!");
+        return;
+      }
+
+      let user = { name, email, username, password };
+      localStorage.setItem("user", JSON.stringify(user));
+
+      alert("You have signed up successfully!");
+      window.location.href = "nextpage.html";
+    }
+
+    // Login Function
+    function loginUser() {
+      let username = document.getElementById("loginUsername").value;
+      let password = document.getElementById("loginPassword").value;
+
+      let savedUser = localStorage.getItem("user");
+
+      if (!savedUser) {
+        alert("No account found! Please sign up first.");
+        return;
+      }
+
+      let user = JSON.parse(savedUser);
+
+      if (username === user.username && password === user.password) {
+        alert("You have logged in successfully!");
+        window.location.href = "home.html";
+      } else {
+        alert("Invalid login credentials!");
+      }
+    }
+  </script>
+</body>
+</html>

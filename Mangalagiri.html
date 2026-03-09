@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Heritage · Culture · Tourism</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f9f9f9;
+    }
+
+    header {
+      background: #4b0082;
+      color: white;
+      text-align: center;
+      padding: 20px;
+    }
+
+    /* Temple Section */
+    .temple-section {
+      display: flex;
+      align-items: flex-start;
+      justify-content: center;
+      padding: 20px;
+      gap: 20px;
+    }
+
+    .temple-section img {
+      width: 600px;
+      height: 800ppx;
+      border-radius: 8px;
+    }
+
+    .temple-info {
+      max-width: 600px;
+      background: #fff;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+
+    h2 {
+      margin-top: 0;
+      color: #222;
+    }
+
+    /* Booking Section */
+    .booking {
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+      padding: 20px;
+    }
+
+    .card {
+      background: #fff;
+      padding: 20px;
+      margin: 10px;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      width: 300px;
+    }
+
+    .card form {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .card label {
+      margin: 8px 0 4px;
+      font-weight: bold;
+    }
+
+    .card input {
+      padding: 8px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+
+    .card button {
+      margin-top: 12px;
+      padding: 10px;
+      background: #4b0082;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+
+    .card button:hover {
+      background: #360061;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .temple-section {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .temple-section img {
+        width: 100%;
+        max-width: 500px;
+      }
+
+      .temple-info {
+        max-width: 90%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Heritage · Culture · Tourism</h1>
+    <p>Explore India’s rich heritage, culture, and tourism</p>
+  </header>
+  <section class="temple-section">
+  
+    <img src="images/Mangalagiri.jpg" alt="Mangalagiri Temple">
+    <div class="temple-info">
+      <h2>Mangalagiri Temple</h2>
+      <p>Ancient Legend: The temple is dedicated to Lord Narasimha, an incarnation of Lord Vishnu.
+</p>
+        <p>The deity is called Panakala Narasimha because devotees offer jaggery water (panakam) directly into the Lord’s mouth—a unique ritual said to produce a gurgling sound as if He is drinking it.
+        </p>
+    <p>References date back to the Satya Yuga and inscriptions show patronage by the Vijayanagara kings.
+</p>
+      <p><b>Darshan Timings</b>
+        <p>Morning: 7:00 AM – 1:00 PM</p>
+        <p>Evening: 4:00 PM – 8:30 PM
+</p>
+<p>Panakam Offering: Daily, especially auspicious on Saturdays and during Narasimha Jayanti.
+</p>
+        </p>
+      <p><b>Best Time to Visit</b>
+        <p>October to March for comfortable weather.
+
+Major festivals: Sri Narasimha Jayanti and Brahmotsavam (March–April).
+
+</p>
+<p>October to March for comfortable weather.
+
+Major festivals: Sri Narasimha Jayanti and Brahmotsavam (March–April).
+
+</p>
+</p>
+      
+    </div>
+  </section>
+
+  <!-- Booking Section -->
+  <section class="booking">
+    <!-- Hotel Booking -->
+    <div class="card">
+      <h2>Hotel Booking</h2>
+      <form>
+        <label>Name:</label>
+        <input type="text" required>
+        
+        <label>Check-in:</label>
+        <input type="date" required>
+        
+        <label>Check-out:</label>
+        <input type="date" required>
+        
+        <button type="submit">Book Hotel</button>
+      </form>
+    </div>
+
+    <!-- Transport Booking -->
+    <div class="card">
+      <h2>Transport Booking</h2>
+      <form>
+        <label>Name:</label>
+        <input type="text" required>
+        
+        <label>From:</label>
+        <input type="text" required>
+        
+        <label>To:</label>
+        <input type="text" required>
+        
+        <label>Date of Travel:</label>
+        <input type="date" required>
+        
+        <button type="submit">Book Transport</button>
+      </form>
+    </div>
+  </section>
+</body>
+</html>

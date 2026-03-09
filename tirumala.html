@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Heritage · Culture · Tourism</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f9f9f9;
+    }
+
+    header {
+      background: #4b0082;
+      color: white;
+      text-align: center;
+      padding: 20px;
+    }
+
+    /* Temple Section */
+    .temple-section {
+      display: flex;
+      align-items: flex-start;
+      justify-content: center;
+      padding: 20px;
+      gap: 20px;
+    }
+
+    .temple-section img {
+      width: 600px;
+      height: auto;
+      border-radius: 8px;
+    }
+
+    .temple-info {
+      max-width: 600px;
+      background: #fff;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+
+    h2 {
+      margin-top: 0;
+      color: #222;
+    }
+
+    /* Booking Section */
+    .booking {
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+      padding: 20px;
+    }
+
+    .card {
+      background: #fff;
+      padding: 20px;
+      margin: 10px;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      width: 300px;
+    }
+
+    .card form {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .card label {
+      margin: 8px 0 4px;
+      font-weight: bold;
+    }
+
+    .card input {
+      padding: 8px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+
+    .card button {
+      margin-top: 12px;
+      padding: 10px;
+      background: #4b0082;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+
+    .card button:hover {
+      background: #360061;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .temple-section {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .temple-section img {
+        width: 100%;
+        max-width: 500px;
+      }
+
+      .temple-info {
+        max-width: 90%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Heritage · Culture · Tourism</h1>
+    <p>Explore India’s rich heritage, culture, and tourism</p>
+  </header>
+  <section class="temple-section">
+  
+    <img src="images/tirumala1.jpg" alt="Tirumala Venkateswara Temple">
+    <div class="temple-info">
+      <h2>Tirumala Venkateswara Temple</h2>
+      <p>Tirumala Venkateswara Temple, located in Andhra Pradesh, is one of the most famous and holiest temples in India. Dedicated to Lord Venkateswara, it attracts millions of devotees every year.</p>
+      <p>The temple is known for its grand architecture, spiritual significance, and traditions. The best time to visit is during Brahmotsavam when the entire temple town comes alive with rituals and celebrations.</p>
+      <p><b>Months → </b>November to February (pleasant weather, less rush).</p>
+      <p><b>Timings → </b>Early morning (3 AM–7 AM) or late night (9 PM–12 AM), weekdays preferred.</p>
+    </div>
+  </section>
+
+  <!-- Booking Section -->
+  <section class="booking">
+    <!-- Hotel Booking -->
+    <div class="card">
+      <h2>Hotel Booking</h2>
+      <form>
+        <label>Name:</label>
+        <input type="text" required>
+        
+        <label>Check-in:</label>
+        <input type="date" required>
+        
+        <label>Check-out:</label>
+        <input type="date" required>
+        
+        <button type="submit">Book Hotel</button>
+      </form>
+    </div>
+
+    <!-- Transport Booking -->
+    <div class="card">
+      <h2>Transport Booking</h2>
+      <form>
+        <label>Name:</label>
+        <input type="text" required>
+        
+        <label>From:</label>
+        <input type="text" required>
+        
+        <label>To:</label>
+        <input type="text" required>
+        
+        <label>Date of Travel:</label>
+        <input type="date" required>
+        
+        <button type="submit">Book Transport</button>
+      </form>
+    </div>
+  </section>
+</body>
+</html>

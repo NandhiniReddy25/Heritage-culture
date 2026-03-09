@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Explore India - Tourism Portal</title>
+  <style>
+    /* ---------- Background + Base Styling ---------- */
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: url('india-bg.jpg') no-repeat center center/cover; /* Replace with your image */
+      margin: 0;
+      color: #fff;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+    }
+
+    /* ---------- Top Header Bar ---------- */
+    .top-bar {
+      background:  #4f0b8a;
+      backdrop-filter: blur(8px);
+      color: #fff;
+      width: 100%;
+      text-align: center;
+      padding: 25px 0;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.4);
+    }
+
+    .top-bar h1 {
+      font-size: 2.3rem;
+      margin: 0 0 5px;
+      letter-spacing: 1px;
+      color: white;
+      text-shadow: 2px 2px 5px #000;
+    }
+
+    .top-bar p {
+      margin: 0;
+      font-size: 1rem;
+      opacity: 0.9;
+    }
+
+    /* ---------- Main Glass Container ---------- */
+    .main-box {
+      background: rgba(255, 255, 255, 0.15);
+      border-radius: 20px;
+      box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
+      backdrop-filter: blur(12px);
+      padding: 40px 30px;
+      width: 90%;
+      max-width: 800px;
+      text-align: center;
+      margin: 60px auto 40px;
+    }
+
+    .main-box h2 {
+      font-size: 1.8rem;
+      margin-bottom: 20px;
+      color: #1e1d1c;
+      text-shadow: 1px 1px 3px #000;
+    }
+
+    /* ---------- Dropdown Filters ---------- */
+    .filters {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 15px;
+      margin-bottom: 25px;
+    }
+
+    select {
+      padding: 12px 20px;
+      border-radius: 12px;
+      border: none;
+      font-size: 1rem;
+      background: rgba(237, 235, 235, 0.9);
+      color: #333;
+      cursor: pointer;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    select:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 10px rgba(255,255,255,0.4);
+    }
+
+    /* ---------- Info & Month Results ---------- */
+    #info, #monthResult {
+      display: none;
+      background: rgba(0, 0, 0, 0.6);
+      padding: 20px;
+      border-radius: 12px;
+      font-size: 1.1rem;
+      color: #fff;
+      margin-top: 15px;
+      line-height: 1.5;
+    }
+
+    /* ---------- Footer ---------- */
+    footer {
+      color: #171717;
+      font-size: 0.9rem;
+      text-align: center;
+      margin-bottom: 20px;
+      
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <div class="top-bar">
+    <h1>Heritage • Culture • Tourism</h1>
+    <p>Explore India's rich heritage, culture, and tourism</p>
+  </div>
+
+  <!-- Main Content Box -->
+  <div class="main-box">
+    <h2>Find the Best Time to Visit</h2>
+
+    <div class="filters">
+      <!-- State Dropdown -->
+      <select id="stateSelect">
+        <option value="">Select State</option>
+  <option value="andhra pradesh.html">Andhra Pradesh</option>
+  <option value="arunachal pradesh.html">Arunachal Pradesh</option>
+  <option value="assam.html">Assam</option>
+  <option value="bihar.html">Bihar</option>
+  <option value="chatisgarh.html">Chhattisgarh</option>
+  <option value="goa.html">Goa</option>
+  <option value="gujarat.html">Gujarat</option>
+  <option value="haryana.html">Haryana</option>
+  <option value="himachal pradesh.html">Himachal Pradesh</option>
+  <option value="jammu and kashmir.html">Jammu and Kashmir</option>
+  <option value="jharkhand.html">Jharkhand</option>
+  <option value="karnataka.html">Karnataka</option>
+  <option value="kerala.html">Kerala</option>
+  <option value="madhya pradesh.html">Madhya Pradesh</option>
+  <option value="maharastra.html">Maharashtra</option>
+  <option value="manipur.html">Manipur</option>
+  <option value="meghalaya.html">Meghalaya</option>
+  <option value="mizoram.html">Mizoram</option>
+  <option value="nagaland.html">Nagaland</option>
+  <option value="odisha.html">Odisha</option>
+  <option value="punjab.html">Punjab</option>
+  <option value="rajasthan.html">Rajasthan</option>
+  <option value="sikkim.html">Sikkim</option>
+  <option value="tamil nadu.html">Tamil Nadu</option>
+  <option value="telangana.html">Telangana</option>
+  <option value="tripura.html">Tripura</option>
+  <option value="uttar pradesh.html">Uttar Pradesh</option>
+  <option value="uttarakhand.html">Uttarakhand</option>
+  <option value="west bengal.html">West Bengal</option>
+      </select>
+
+      <!-- Month Dropdown -->
+      <select id="monthSelect">
+        <option value="">Search by Month</option>
+        <option value="jan">January</option>
+        <option value="feb">February</option>
+        <option value="mar">March</option>
+        <option value="apr">April</option>
+        <option value="may">May</option>
+        <option value="jun">June</option>
+        <option value="jul">July</option>
+        <option value="aug">August</option>
+        <option value="sep">September</option>
+        <option value="oct">October</option>
+        <option value="nov">November</option>
+        <option value="dec">December</option>
+      </select>
+    </div>
+
+    <div id="info"></div>
+    <div id="monthResult"></div>
+  </div>
+
+  <footer>
+    © 2025 Indian Tourism Portal | Developed by <strong>Code Explorers Team</strong>
+  </footer>
+
+  <script>
+    const bestTimes = {
+  "andhra pradesh.html": "October to February – Pleasant weather for beaches and temples.",
+  "arunachal pradesh.html": "March to June – Ideal for trekking and nature exploration.",
+  "assam.html": "October to April – Best for wildlife and tea gardens.",
+  "bihar.html": "October to March – Great for historical and religious sites.",
+  "chhattisgarh.html": "October to March – Comfortable for forests and waterfalls.",
+  "goa.html": "November to February – Perfect for beaches and nightlife.",
+  "gujarat.html": "October to February – Best for cultural tours and Rann of Kutch.",
+  "haryana.html": "October to March – Pleasant weather for sightseeing.",
+  "himachal pradesh.html": "March to June, September to November – Ideal for trekking and hill stations.",
+  "jharkhand.html": "October to March – Best for waterfalls and wildlife.",
+  "karnataka.html": "October to February – Great for hill stations and heritage sites.",
+  "kerala.html": "September to March – Great for backwaters and greenery.",
+  "madhya pradesh.html": "October to March – Best for historical tours and national parks.",
+  "maharashtra.html": "October to February – Ideal for Mumbai, hill stations, and beaches.",
+  "manipur.html": "October to March – Comfortable weather for culture and lakes.",
+  "meghalaya.html": "October to April – Perfect for living root bridges and waterfalls.",
+  "mizoram.html": "October to March – Pleasant weather for hills and lakes.",
+  "nagaland.html": "October to March – Best for festivals and trekking.",
+  "odisha.html": "October to March – Ideal for beaches and temples.",
+  "punjab.html": "October to March – Great for cultural sightseeing and fairs.",
+  "rajasthan.html": "October to March – Best for forts and desert tours.",
+  "sikkim.html": "March to June, September to November – Perfect for mountains and trekking.",
+  "tamil nadu.html": "November to March – Ideal for sightseeing and hill stations.",
+  "telangana.html": "October to February – Cool weather for heritage visits.",
+  "tripura.html": "October to March – Pleasant weather for palaces and nature.",
+  "uttar pradesh.html": "November to February – Perfect for Agra and Varanasi.",
+  "uttarakhand.html": "March to June, September to November – Ideal for trekking and hill stations.",
+  "west bengal.html": "October to March – Great for Kolkata and hill areas."
+};
+
+
+    const monthWise = {
+      jan: ["Goa", "Rajasthan", "Kerala", "Tamil Nadu"],
+      feb: ["Goa", "Telangana", "Andhra Pradesh"],
+      mar: ["Kerala", "Tamil Nadu", "Karnataka"],
+      apr: ["Sikkim", "West Bengal"],
+      may: ["Himachal Pradesh", "Uttarakhand"],
+      jun: ["Kerala", "Meghalaya"],
+      jul: ["Ladakh", "Goa (Monsoon beauty)"],
+      aug: ["Kerala", "Meghalaya", "Karnataka"],
+      sep: ["Andhra Pradesh", "Odisha", "Kerala"],
+      oct: ["Rajasthan", "Telangana", "Gujarat"],
+      nov: ["Goa", "Kerala", "Tamil Nadu"],
+      dec: ["Rajasthan", "Goa", "Tamil Nadu"]
+    };
+
+    const stateSelect = document.getElementById("stateSelect");
+    const monthSelect = document.getElementById("monthSelect");
+    const info = document.getElementById("info");
+    const monthResult = document.getElementById("monthResult");
+
+    // State-based info
+    stateSelect.addEventListener("change", function() {
+      const page = this.value;
+      const message = bestTimes[page] || "Can be visited throughout the year.";
+      if (page) {
+        info.style.display = "block";
+        info.innerHTML = `<strong>Best Time to Visit:</strong><br>${message}`;
+        setTimeout(() => {
+          if (confirm(`${message}\n\nDo you want to visit ${page.replace('.html', '').toUpperCase()} page?`)) {
+            window.location.href = page;
+          }
+        }, 400);
+      } else {
+        info.style.display = "none";
+      }
+    });
+
+    // Month-based info
+    monthSelect.addEventListener("change", function() {
+      const month = this.value;
+      if (month && monthWise[month]) {
+        const states = monthWise[month].join(", ");
+        monthResult.style.display = "block";
+        monthResult.innerHTML = `<strong>Best States to Visit in ${this.options[this.selectedIndex].text}:</strong><br>${states}`;
+      } else {
+        monthResult.style.display = "none";
+      }
+    });
+  </script>
+</body>
+</html>
